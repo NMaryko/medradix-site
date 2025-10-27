@@ -7,81 +7,172 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #222;
+      font-family: "Georgia", serif;
+      background-color: #f7f4ee;
+      color: #3b2e2a;
+      text-align: center;
     }
+
     header {
-      background-color: #ffffff;
-      border-bottom: 2px solid #e5e5e5;
-      text-align: center;
-      padding: 25px 10px 10px;
+      padding: 30px 0 10px 0;
     }
-    header h1 {
-      font-size: 2.2em;
-      margin: 0;
-      color: #256D6D; /* зелёный Med */
-      letter-spacing: 0.5px;
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2b2b2b;
     }
-    header h1 span {
-      color: #6b2d2d; /* бордовый Radix */
-      font-family: 'Georgia', serif;
+
+    h1 span {
+      color: #156c5f;
     }
-    nav {
-      margin-top: 15px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #256D6D;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #6b2d2d;
-    }
-    main {
-      text-align: center;
-      padding: 80px 20px;
-    }
-    h2 {
-      font-weight: 400;
-      color: #333;
-    }
-    p.slogan {
+
+    .motto {
       font-style: italic;
-      color: #6b2d2d;
-      margin-top: 15px;
-      font-size: 1.1em;
+      color: #6c574b;
+      margin-top: 5px;
+      font-size: 16px;
     }
+
+    nav {
+      margin-top: 20px;
+      background-color: transparent;
+      font-size: 17px;
+    }
+
+    nav a {
+      color: #3b2e2a;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #156c5f;
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      text-align: left;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #f8f6f1;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      color: #4d2c23;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
     footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-      padding: 25px 10px;
-      border-top: 1px solid #ddd;
       margin-top: 40px;
+      padding: 30px 0;
+      font-size: 14px;
+      color: #7a6e64;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #156c5f;
+      color: white;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+
+    .button:hover {
+      background-color: #12584d;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Med<span>Radix</span></h1>
-    <nav>
-      <a href="#">Кардиология</a>
-      <a href="#">Эндокринология</a>
-      <a href="#">Неврология</a>
-      <a href="#">Стоматология</a>
-    </nav>
+    <h1><span>Med</span>Radix</h1>
+    <div class="motto">
+      <p><em>Mens sana in corpore sano</em></p>
+      <p>«В здоровом теле — здоровый дух» — Ювенал</p>
+    </div>
   </header>
 
-  <main>
-    <h2>Добро пожаловать на MedRadix — медицинскую платформу нового поколения.</h2>
-    <p class="slogan">scientia pro vita — знание во благо жизни.</p>
+  <nav>
+    <a href="#">Новое</a>
+    <a href="#">Гайдлайны</a>
+    <a href="#">Статьи</a>
+    <a href="#">Голос эксперта</a>
+    <a href="#">Курсы</a>
+    <a href="#">Калькуляторы</a>
+    <a href="#">Лекарства</a>
+    <a href="#">Среднему медперсоналу</a>
+  </nav>
+
+  <main class="section">
+
+    <div class="card">
+      <h2>Новое</h2>
+      <p>Обновления по версиям гайдлайнов, свежим исследованиям и материалам, появляющимся на платформе MedRadix.</p>
+    </div>
+
+    <div class="card">
+      <h2>Гайдлайны</h2>
+      <p>Европейские и американские рекомендации уже сопоставлены: вы видите оба подхода в одной таблице и экономите время.</p>
+    </div>
+
+    <div class="card">
+      <h2>Статьи</h2>
+      <p>Свежие обзоры из ключевых медицинских журналов, краткие выводы и ссылки на оригиналы исследований.</p>
+    </div>
+
+    <div class="card">
+      <h2>Голос эксперта</h2>
+      <p>Комментарии ведущих специалистов по ключевым исследованиям и клиническим рекомендациям.</p>
+    </div>
+
+    <div class="card">
+      <h2>Курсы</h2>
+      <p>Собраны бесплатные программы, дающие международные баллы (CME/NMO) для врачей и медработников.</p>
+    </div>
+
+    <div class="card">
+      <h2>Калькуляторы</h2>
+      <p>Один ввод — два результата: расчёты по европейским и американским стандартам одновременно.</p>
+    </div>
+
+    <div class="card">
+      <h2>Лекарства</h2>
+      <p>Инструкции, формы выпуска и схемы применения — встраиваются прямо в гайдлайны для удобства практического использования.</p>
+    </div>
+
+    <div class="card">
+      <h2>Среднему медперсоналу</h2>
+      <p>Раздел с редкими обучающими материалами и возможностью получения бесплатных кредитов за прохождение курсов.</p>
+    </div>
+
   </main>
+
+  <a href="#" class="button">Получить полный доступ к MedRadix</a>
 
   <footer>
     © 2025 MedRadix. Все права защищены.
   </footer>
 </body>
 </html>
+
+    
