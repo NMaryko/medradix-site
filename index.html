@@ -285,8 +285,233 @@
   </div>
 </body>
 </html>
-Отправлено
-Написать в
+Вы отправили
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MedRadix — scientia pro vita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f4f1ec;            /* тёплый светлый фон как на скрине */
+      --text:#2b2b2b;
+      --muted:#6b6b6b;
+      --card:#f8f6f2;
+      --border:#e6e1d9;
+      --brand:#138a7a;         /* изумрудно-бирюзовый для акцентов */
+      --brand-dark:#0c6e61;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+
+    /* Шапка */
+    .topbar{
+      max-width:1150px;
+      margin:0 auto;
+      padding:18px 18px 6px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{
+      line-height:1;
+    }
+    .brand .med{color:var(--brand); font-weight:700; font-size:28px; letter-spacing:.3px}
+    .brand .radix{color:#6b4b3b; font-weight:700; font-size:28px}
+    .brand small{display:block; margin-top:4px; color:#7a6f66; font-style:italic}
+
+    .login-btn{
+      background:var(--brand);
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      padding:10px 18px;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .login-btn:hover{background:var(--brand-dark)}
+
+    /* Герой + поиск */
+    .hero{
+      max-width:900px;
+      margin:10px auto 8px;
+      text-align:center;
+      padding:0 16px;
+    }
+    h1{
+      font-family:"Playfair Display",serif;
+      font-weight:700;
+      font-size:38px;
+      margin:8px 0 4px;
+    }
+    .latin{color:#5a5a5a; margin:2px 0 4px; font-style:italic}
+    .latin small{display:block; color:#8a8a8a; margin-top:4px}
+
+    .search{
+      margin:18px auto 20px;
+      max-width:820px; 
+      position:relative;
+    }
+    .search input{
+      width:100%;
+      padding:16px 54px 16px 18px;
+      border:2px solid var(--brand);
+      border-radius:12px;
+      background:#fbfaf7;
+      outline:none;
+      font-size:16px;
+    }
+    .search button{
+      position:absolute; right:6px; top:6px;
+      height:44px; width:44px;
+      border-radius:10px; border:none;
+      background:var(--brand); color:#fff; font-weight:700;
+      cursor:pointer;
+    }
+
+    /* Навигация */
+    .nav{
+      max-width:980px;
+      margin:0 auto 14px;
+      padding:0 16px;
+      display:flex; flex-wrap:wrap; gap:18px;
+      justify-content:center;
+    }
+    .nav a{
+      color:#2f3131; text-decoration:none; font-weight:500;
+      padding:8px 10px; border-radius:8px;
+    }
+    .nav a:hover{background:#ece7df}
+
+    /* Карточки */
+    .grid{
+      max-width:980px; margin:6px auto 40px; padding:0 16px;
+      display:grid; gap:18px;
+      grid-template-columns:repeat(3,1fr);
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      min-height:150px;
+      box-shadow:0 1px 0 rgba(0,0,0,.02);
+    }
+    .card h3{
+      font-family:"Playfair Display",serif;
+      margin:0 0 8px; font-size:20px;
+    }
+    .muted{color:var(--muted)}
+    .section-caption{
+      max-width:980px; margin:6px auto; padding:0 16px; color:#5a5a5a;
+      font-weight:600;
+    }
+
+    /* Адаптив */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:630px){
+      .topbar{flex-direction:column; gap:10px; align-items:flex-start}
+      .grid{grid-template-columns:1fr}
+      h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="topbar">
+    <div class="brand">
+      <div><span class="med">Med</span><span class="radix">Radix</span></div>
+      <small>Scientia pro vita</small>
+    </div>
+    <button class="login-btn">Войти</button>
+  </header>
+
+  <!-- Герой + цитата + поиск -->
+  <section class="hero">
+    <h1>Veni, Vidi, Vici</h1>
+    <div class="latin">Пришёл, увидел, победил <small>— Юлий Цезарь</small></div>
+
+    <div class="search">
+      <input type="search" placeholder="Поиск по гайдам, статьям, курсам…" />
+      <button>🔎</button>
+    </div>
+  </section>
+
+  <!-- Навигация -->
+  <nav class="nav" aria-label="Главное меню">
+    <a href="#">Новое</a>
+    <a href="#">Гайдлайны</a>
+    <a href="#">Статьи</a>
+    <a href="#">Голос эксперта</a>
+    <a href="#">Курсы</a>
+    <a href="#">Калькуляторы</a>
+    <a href="#">Лекарства</a>
+    <a href="#">Среднему медперсоналу</a>
+  </nav>
+
+  <!-- Карточки 1 ряд -->
+  <main class="grid">
+    <article class="card">
+      <h3>Новое</h3>
+      <p class="muted">Обновления по версиям гайдлайнов, свежим исследованиям и материалам, появляющимся на платформе MedRadix.</p>
+    </article>
+
+    <article class="card">
+      <h3>Гайдлайны</h3>
+      <p class="muted">Европейские и американские рекомендации уже сопоставлены: вы видите оба подхода к лечению в одной таблице и экономите время.</p>
+    </article>
+
+    <article class="card">
+      <h3>Статьи</h3>
+      <p class="muted">Свежие обзоры из ключевых медицинских журналов мира, краткие выводы, цифры и ссылки на оригиналы исследований.</p>
+    </article>
+
+    <!-- 2 ряд -->
+    <article class="card">
+      <h3>Голос эксперта</h3>
+      <p class="muted">Комментарии ведущих специалистов по ключевым исследованиям и клиническим рекомендациям.</p>
+    </article>
+
+    <article class="card">
+      <h3>Курсы</h3>
+      <p class="muted">Собраны бесплатные российские и зарубежные программы, дающие международные баллы (CME/HМО) для врачей и медработников.</p>
+    </article>
+
+    <article class="card">
+      <h3>Калькуляторы</h3>
+      <p class="muted">Один ввод — два результата: параллельные расчёты по европейским и американским стандартам одновременно.</p>
+    </article>
+
+    <!-- 3 ряд -->
+    <article class="card">
+      <h3>Лекарства</h3>
+      <p class="muted">Инструкции, формы, дозировки и взаимодействия. Применение сверено с актуальными рекомендациями; ссылки на гайды внутри разделов.</p>
+    </article>
+
+    <article class="card">
+      <h3>Среднему медперсоналу</h3>
+      <p class="muted">Материалы для среднего медперсонала: учебные модули, чек-листы, протоколы и быстрые памятки.</p>
+    </article>
+
+    <article class="card">
+      <h3>Папки</h3>
+      <p class="muted">Сохранение сертификатов и файлов в личном кабинете с автоматическим подсчётом баллов (CME/HMO).</p>
+    </article>
+  </main>
+
+</body>
+</html>
+
 
 
     
